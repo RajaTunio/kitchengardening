@@ -1,34 +1,38 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="https://t.contentsquare.net/uxa/0b9eae11c0ead.js"></script>
-    <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0130/8479.js" async="async"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="contact.html">
-    <link rel="stylesheet" href="about.html">
-
+ 
     
     <title>Kitchen Gardening</title>
 </head>
 <body>
 
   <header class="header" data-header>
-    <div class="container">
-              <div class="logo">
-                  Kitchen <span>Gardening</span>
-              </div>
+    <div class="container header-inner">
               
-      <nav class="navbar">
-        <ul class="nav-menu">
-            <a href="index.html" class="nav-link">Home</a> 
+               <a class="logo" href="home.html">Kitchen <span>Gardening</span></a>
+              
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+            <a href="home.html" class="nav-link">Home</a> 
             <a href="about.html" class="nav-link">About</a> 
             <a href="contact.html" class="nav-link">Contact us</a> 
-        </ul>
       </nav>
+      <button id="hamburgerBtn" class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </header>
+
+  <!-- Mobile menu drawer -->
+  <div id="menuDrawer" class="menu-drawer" aria-hidden="true">
+    <div class="close"><button id="menuCloseBtn" aria-label="Close menu">✕</button></div>
+    <nav role="navigation" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
         
     <main role="main">
       <!-- Intro Section -->
@@ -300,8 +304,9 @@
     
         
         <section class="video-section">
-        <div class="container">
-            <h1>Our Gardening Tutorials</h1>
+        <div class="container1">
+            <h2>Our Gardening Tutorials</h2>
+        <div class="video-grid">
             <video controls width="600">
               <source src="media/tomatos.webm" type="video/mp4">
               Your browser does not support the video tag.
@@ -318,6 +323,7 @@
             <source src="media/spinach.webm" type="video/mp4">
             Your browser does not support the video tag.
           </video>
+        </div>
     </div>
   </section>
 </main>
@@ -363,6 +369,7 @@
   </div>
 </footer>
 
+  <script src="js/menu.js"></script>
   
 </body>
 </html>
