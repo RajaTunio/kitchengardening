@@ -14,27 +14,35 @@
 <!--------- Header -------------->
 
 
-  <header class="header" data-header>
-    <div class="container">
-              <div class="logo">
-                  Kitchen <span>Gardening</span>
-              </div>
+ <header class="header" data-header>
+    <div class="container header-inner">
               
-      <nav class="navbar">
-        <ul class="nav-menu">
-            <a href="index.html" class="nav-link">Home</a> 
+               <a class="logo" href="home.html">Kitchen <span>Gardening</span></a>
+              
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+            <a href="home.html" class="nav-link">Home</a> 
             <a href="about.html" class="nav-link">About</a> 
             <a href="contact.html" class="nav-link">Contact us</a> 
-        </ul>
       </nav>
+      <button id="hamburgerBtn" class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </header>
+
+  <!-- Mobile menu drawer -->
+  <div id="menuDrawer" class="menu-drawer" aria-hidden="true">
+    <div class="close"><button id="menuCloseBtn" aria-label="Close menu">✕</button></div>
+    <nav role="navigation" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 
 
 
 <section class="section about" id="about" aria-label="about">
                 <div class="container">
-                    <div class="about-banner img-holder" style="--width:960 ; --height: 694;">
+                    <div class="about-banner img-holder" >
                         <img src="./images/alo.webp" alt="about banner" class="img-cover" width="960" height="694" loading="lazy">
  
 
@@ -161,7 +169,7 @@
     
 
   </main>
-  <footer class="footer">
+<footer class="footer">
   <div class="container">
     <div class="footer-about">
       <h3>About Us</h3>
@@ -171,8 +179,8 @@
     <div class="footer-links">
       <h3>Quick Links</h3>
       <ul>
-        <li><a href="index.html#service">Services</a></li>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="#service">Services</a></li>
+        <li><a href="#">Home</a></li>
         <li><a href="about.html">About us</a></li>
         <li><a href="contact.html">Contact us</a></li>
       </ul>
@@ -202,5 +210,8 @@
     © 2025 Kitchen Gardening. All rights reserved.
   </div>
 </footer>
+
+  <script src="js/menu.js"></script>
+  
 </body>
 </html>
